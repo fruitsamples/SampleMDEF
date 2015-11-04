@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 43;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,8 +22,6 @@
 		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		25A1667400AC4ECC03000001 /* Sample.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = Sample.c; sourceTree = "<group>"; };
 		25A3B9C700AC4F5403000001 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
-		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
-		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		4F94F03307B3099A00AE9F13 /* Info-CarbonMDEF.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-CarbonMDEF.plist"; sourceTree = "<group>"; };
 		4F94F03407B3099A00AE9F13 /* CarbonMDEF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonMDEF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				20286C33FDCF999611CA2CEA /* Carbon.framework */,
-				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
-				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -113,7 +109,7 @@
 /* Begin PBXNativeTarget section */
 		4F94F02707B3099A00AE9F13 /* SampleMDEF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE651B990C3472C300EC1FC8 /* Build configuration list for PBXNativeTarget "SampleMDEF" */;
+			buildConfigurationList = 4F2B060008A02B4F0055E173 /* Build configuration list for PBXNativeTarget "SampleMDEF" */;
 			buildPhases = (
 				4F94F02807B3099A00AE9F13 /* Headers */,
 				4F94F02A07B3099A00AE9F13 /* Resources */,
@@ -136,10 +132,12 @@
 /* Begin PBXProject section */
 		20286C28FDCF999611CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = BE651B9D0C3472C300EC1FC8 /* Build configuration list for PBXProject "SampleMDEF" */;
+			buildConfigurationList = 4F2B060408A02B4F0055E173 /* Build configuration list for PBXProject "SampleMDEF" */;
+			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
 			mainGroup = 20286C29FDCF999611CA2CEA /* CarbonMDEF */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				4F94F02707B3099A00AE9F13 /* SampleMDEF */,
 			);
@@ -200,128 +198,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BE651B9A0C3472C300EC1FC8 /* Development */ = {
+		4F2B060108A02B4F0055E173 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon/;
 				INFOPLIST_FILE = "Info-CarbonMDEF.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = "";
-				OPTIMIZATION_CFLAGS = "-O0";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = CarbonMDEF;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		BE651B9B0C3472C300EC1FC8 /* Deployment */ = {
+		4F2B060208A02B4F0055E173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon/;
 				INFOPLIST_FILE = "Info-CarbonMDEF.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = CarbonMDEF;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		BE651B9C0C3472C300EC1FC8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = /Developer/Headers/FlatCarbon/;
-				INFOPLIST_FILE = "Info-CarbonMDEF.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = CarbonMDEF;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
 				WRAPPER_EXTENSION = app;
 			};
-			name = Default;
+			name = Release;
 		};
-		BE651B9E0C3472C300EC1FC8 /* Development */ = {
+		4F2B060508A02B4F0055E173 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOTS = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
-			name = Development;
+			name = Debug;
 		};
-		BE651B9F0C3472C300EC1FC8 /* Deployment */ = {
+		4F2B060608A02B4F0055E173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOTS = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
-			name = Deployment;
-		};
-		BE651BA00C3472C300EC1FC8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE651B990C3472C300EC1FC8 /* Build configuration list for PBXNativeTarget "SampleMDEF" */ = {
+		4F2B060008A02B4F0055E173 /* Build configuration list for PBXNativeTarget "SampleMDEF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE651B9A0C3472C300EC1FC8 /* Development */,
-				BE651B9B0C3472C300EC1FC8 /* Deployment */,
-				BE651B9C0C3472C300EC1FC8 /* Default */,
+				4F2B060108A02B4F0055E173 /* Debug */,
+				4F2B060208A02B4F0055E173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
-		BE651B9D0C3472C300EC1FC8 /* Build configuration list for PBXProject "SampleMDEF" */ = {
+		4F2B060408A02B4F0055E173 /* Build configuration list for PBXProject "SampleMDEF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE651B9E0C3472C300EC1FC8 /* Development */,
-				BE651B9F0C3472C300EC1FC8 /* Deployment */,
-				BE651BA00C3472C300EC1FC8 /* Default */,
+				4F2B060508A02B4F0055E173 /* Debug */,
+				4F2B060608A02B4F0055E173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
